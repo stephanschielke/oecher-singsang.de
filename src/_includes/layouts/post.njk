@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+---
+<article id="post-{{ wp_id }}" class="post type-post status-publish hentry">
+  <header class="entry-header">
+    <h1 class="entry-title">{{ title }}</h1>
+  </header>
+
+  <div class="entry-content">
+    {{ content | safe }}
+  </div>
+
+  <footer class="entry-meta">
+    <time class="entry-date" datetime="{{ dateRaw }}">{{ date | germanDate }}</time> · von <span class="author vcard">{{ author }}</span>
+    {% if categories.length or tags.length %}
+    <span class="badge-line">{% if categories.length %}<span class="cat-links">{% for cat in categories %}<a href="/category/{{ cat | slugify }}/" rel="category">{{ cat }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>{% endif %}{% if tags.length %}<span class="tag-links">{% for tag in tags %}<a href="/tag/{{ tag | slugify }}/" rel="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span>{% endif %}</span>
+    {% endif %}
+  </footer>
+</article>
+
+{% set allPosts = collections.posts %}
+{% set currentIndex = -1 %}
+{% for post in allPosts %}
+  {% if post.url == page.url %}
+    {% set currentIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% if currentIndex >= 0 %}
+<nav class="nav-single">
+  <h3 class="assistive-text">Beitragsnavigation</h3>
+  <span class="nav-previous">
+    {% if currentIndex < allPosts.length - 1 %}
+    <a href="{{ allPosts[currentIndex + 1].url }}" rel="prev"><span class="meta-nav">&larr;</span> {{ allPosts[currentIndex + 1].data.title }}</a>
+    {% endif %}
+  </span>
+  <span class="nav-next">
+    {% if currentIndex > 0 %}
+    <a href="{{ allPosts[currentIndex - 1].url }}" rel="next">{{ allPosts[currentIndex - 1].data.title }} <span class="meta-nav">&rarr;</span></a>
+    {% endif %}
+  </span>
+</nav>
+{% endif %}
+
+{% set postComments = comments | filterByPostId(wp_id) %}
+{% if postComments.length > 0 %}
+<div id="comments" class="comments-area">
+  <h2 class="comments-title">{{ postComments.length }} Kommentar{% if postComments.length > 1 %}e{% endif %} zu &bdquo;{{ title }}&ldquo;</h2>
+  <ol class="commentlist">
+    {% for comment in postComments %}
+    <li id="comment-{{ comment.id }}" class="comment">
+      <article class="comment-body">
+        <footer class="comment-meta">
+          <div class="comment-author vcard">
+            <b class="fn">{% if comment.authorUrl %}<a href="{{ comment.authorUrl }}" rel="external nofollow">{{ comment.author }}</a>{% else %}{{ comment.author }}{% endif %}</b>
+          </div>
+          <div class="comment-metadata">
+            <time datetime="{{ comment.datetime }}">{{ comment.datetime | germanDate }}</time>
+          </div>
+        </footer>
+        <div class="comment-content">
+          <p>{{ comment.content | nl2br | safe }}</p>
+        </div>
+      </article>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
+{% endif %}

@@ -1,0 +1,25 @@
+<aside id="recent-posts-2" class="widget widget_recent_entries">
+  <h2 class="widget-title">Neueste Beiträge</h2>
+  <ul>
+    {% for post in collections.posts | head(10) %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endfor %}
+  </ul>
+</aside>
+
+<aside id="archives-2" class="widget widget_archive">
+  <h2 class="widget-title">Archiv</h2>
+  <ul>
+    {% for month in collections.postsByMonth %}
+    <li><a href="/archive/{{ month.date | date('%Y/%m') }}/">{{ month.date | germanMonthYear }}</a>&nbsp;({{ month.posts.length }})</li>
+    {% endfor %}
+  </ul>
+</aside>
+
+<aside id="text-5" class="widget widget_text">
+  <h2 class="widget-title">Öcher-Platt im Netz</h2>
+  <div class="textwidget">
+    <a href="http://www.udo-schroll.de/Ueber-Udo-S-Punkt">Udo Schroll</a><br>
+    <a href="http://www.dat-es-oche.de/">Dat es Oche</a>
+  </div>
+</aside>

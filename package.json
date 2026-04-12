@@ -1,0 +1,15 @@
+{
+  "name": "oecher-singsang-de",
+  "version": "1.0.0",
+  "description": "Öcher Singsang - Öcher Platt dialect cultural preservation",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "cheerio": "^1.0.0-rc.12",
+    "slugify": "^1.6.6"
+  }
+}

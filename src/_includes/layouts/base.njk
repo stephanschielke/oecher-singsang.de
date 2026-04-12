@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ description | default(site.description) }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Vollkorn:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body class="custom-background custom-font-enabled single-author{% if layout == 'post' %} single single-post{% endif %}">
+<div id="page" class="hfeed site">
+  <header id="masthead" class="site-header" role="banner">
+    <hgroup>
+      <h1 class="site-title"><a href="/" title="{{ site.title }}" rel="home">{{ site.title }}</a></h1>
+      <h2 class="site-description">{{ site.description }}</h2>
+    </hgroup>
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+      <button class="menu-toggle">Menü</button>
+      <a class="assistive-text" href="#content" title="Springe zum Inhalt">Springe zum Inhalt</a>
+      <div class="menu-hauptmenu-container">
+        <ul id="menu-hauptmenu" class="nav-menu">
+          <li class="menu-item{% if page.url == '/' %} current-menu-item{% endif %}"><a href="/">Startseite</a></li>
+          <li class="menu-item{% if page.url.startsWith('/archive') or page.url.startsWith('/posts') or page.url.startsWith('/category') or page.url.startsWith('/tag') %} current-menu-item{% endif %}"><a href="/archive/">Beiträge</a></li>
+          <li class="menu-item{% if page.url == '/impressum/' %} current-menu-item{% endif %}"><a href="/impressum/">Impressum</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div id="main" class="wrapper">
+    <div id="primary" class="site-content">
+      <div id="content" role="main">
+        {{ content | safe }}
+      </div>
+    </div>
+
+    <div id="secondary" class="widget-area" role="complementary">
+      {% include "partials/sidebar.njk" %}
+    </div>
+  </div>
+
+  <footer id="colophon" role="contentinfo">
+    <div class="site-info">
+      Alle Inhalte stehen unter <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">(CC BY-NC-SA 3.0 DE)</a> Lizenz. <a href="https://github.com/stephanschielke/oecher-singsang.de">{{ site.author }}</a>.
+    </div>
+  </footer>
+</div>
+</body>
+</html>

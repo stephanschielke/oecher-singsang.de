@@ -1,0 +1,44 @@
+---
+layout: layouts/base.njk
+title: Zu den Beiträgen
+pagination:
+  data: collections.posts
+  size: 10
+  alias: paginatedPosts
+permalink: /archive/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber + 1 }}/{% endif %}
+---
+{% for post in paginatedPosts %}
+<article class="post type-post hentry">
+  <header class="entry-header">
+    <h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.data.title }}</a></h1>
+  </header>
+  <div class="entry-content">
+    {{ post.templateContent | safe }}
+  </div>
+  <footer class="entry-meta">
+    <a href="{{ post.url }}"><time class="entry-date" datetime="{{ post.data.dateRaw }}">{{ post.date | germanDate }}</time></a> · von <span class="author vcard">{{ post.data.author }}</span>
+    {% if post.data.categories.length %}
+    <span class="badge-line"><span class="cat-links">{% for cat in post.data.categories %}<a href="/category/{{ cat | slugify }}/" rel="category">{{ cat }}</a>{% if not loop.last %}, {% endif %}{% endfor %}</span></span>
+    {% endif %}
+  </footer>
+</article>
+{% endfor %}
+
+<nav class="navigation paging-navigation">
+  <div class="pagination loop-pagination">
+    {% if pagination.href.previous %}
+    <a class="prev page-numbers" href="{{ pagination.href.previous }}">← Ältere Beiträge</a>
+    {% endif %}
+    {% for pageEntry in pagination.pages %}
+    {% set pageNum = loop.index %}
+    {% if pageNum == pagination.pageNumber + 1 %}
+    <span class="page-numbers current">{{ pageNum }}</span>
+    {% else %}
+    <a class="page-numbers" href="{% if pageNum == 1 %}/archive/{% else %}/archive/page/{{ pageNum }}/{% endif %}">{{ pageNum }}</a>
+    {% endif %}
+    {% endfor %}
+    {% if pagination.href.next %}
+    <a class="next page-numbers" href="{{ pagination.href.next }}">Neuere Beiträge →</a>
+    {% endif %}
+  </div>
+</nav>

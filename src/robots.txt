@@ -1,0 +1,6 @@
+# robots.txt for oecher-singsang.de
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://oecher-singsang.de/sitemap.xml

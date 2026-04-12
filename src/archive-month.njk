@@ -1,0 +1,34 @@
+---
+pagination:
+  data: collections.postsByMonth
+  size: 1
+  alias: monthData
+permalink: /archive/{{ monthData.date | date('%Y/%m') }}/
+layout: layouts/base.njk
+---
+<header class="archive-header">
+  <h1 class="archive-title">{{ monthData.date | germanMonthYear }}</h1>
+</header>
+
+{% for post in monthData.posts %}
+<article class="post type-post hentry">
+  <header class="entry-header">
+    <h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.data.title }}</a></h1>
+  </header>
+  <div class="entry-content">
+    {{ post.templateContent | safe }}
+  </div>
+  <footer class="entry-meta">
+    <a href="{{ post.url }}"><time class="entry-date" datetime="{{ post.data.dateRaw }}">{{ post.date | germanDate }}</time></a>
+    {% if post.data.categories.length %}
+    <span class="cat-links">
+      {% for cat in post.data.categories %}<a href="/category/{{ cat | slugify }}/" rel="category">{{ cat }}</a>{% if not loop.last %}, {% endif %}{% endfor %}
+    </span>
+    {% endif %}
+  </footer>
+</article>
+{% endfor %}
+
+<nav class="archive-nav">
+  <a href="/archive/">← Beiträge</a>
+</nav>

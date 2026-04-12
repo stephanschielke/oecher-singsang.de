@@ -1,0 +1,5 @@
+[
+  { "text": "Startseite", "url": "/" },
+  { "text": "Archiv", "url": "/archive/" },
+  { "text": "Kategorien", "url": "/categories/" }
+]

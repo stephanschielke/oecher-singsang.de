@@ -1,0 +1,31 @@
+---
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tagName
+permalink: /tag/{{ tagName | slugify }}/
+layout: layouts/base.njk
+---
+<header class="archive-header">
+  <h1 class="archive-title">Beiträge zu {{ tagName }}</h1>
+</header>
+
+{% for post in collections.posts %}
+  {% if post.data.tags and tagName in post.data.tags %}
+<article class="post type-post hentry">
+  <header class="entry-header">
+    <h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.data.title }}</a></h1>
+  </header>
+  <div class="entry-content">
+    {{ post.templateContent | safe }}
+  </div>
+  <footer class="entry-meta">
+    <a href="{{ post.url }}"><time class="entry-date" datetime="{{ post.data.dateRaw }}">{{ post.date | germanDate }}</time></a>
+  </footer>
+</article>
+  {% endif %}
+{% endfor %}
+
+<nav class="archive-nav">
+  <a href="/archive/">← Beiträge</a>
+</nav>

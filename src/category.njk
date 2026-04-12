@@ -1,0 +1,29 @@
+---
+pagination:
+  data: collections.categories
+  size: 1
+  alias: category
+permalink: /category/{{ category.name | slugify }}/
+layout: layouts/base.njk
+---
+<header class="archive-header">
+  <h1 class="archive-title">Beiträge in {{ category.name }}</h1>
+</header>
+
+{% for post in category.posts %}
+<article class="post type-post hentry">
+  <header class="entry-header">
+    <h1 class="entry-title"><a href="{{ post.url }}" rel="bookmark">{{ post.data.title }}</a></h1>
+  </header>
+  <div class="entry-content">
+    {{ post.templateContent | safe }}
+  </div>
+  <footer class="entry-meta">
+    <a href="{{ post.url }}"><time class="entry-date" datetime="{{ post.data.dateRaw }}">{{ post.date | germanDate }}</time></a>
+  </footer>
+</article>
+{% endfor %}
+
+<nav class="archive-nav">
+  <a href="/archive/">← Beiträge</a>
+</nav>
