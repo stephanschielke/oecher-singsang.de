@@ -1,0 +1,30 @@
+[
+  {
+    "relation": ["lookalikes/allowlist"],
+    "target": {
+      "namespace": "web",
+      "site": "https://oecher-singsang.de"
+    }
+  },
+  {
+    "relation": ["lookalikes/allowlist"],
+    "target": {
+      "namespace": "web",
+      "site": "https://www.oecher-singsang.de"
+    }
+  },
+  {
+    "relation": ["lookalikes/allowlist"],
+    "target": {
+      "namespace": "web",
+      "site": "https://xn--cher-singsang-hmb.de"
+    }
+  },
+  {
+    "relation": ["lookalikes/allowlist"],
+    "target": {
+      "namespace": "web",
+      "site": "https://www.xn--cher-singsang-hmb.de"
+    }
+  }
+]

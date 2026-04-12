@@ -6,6 +6,7 @@ const GERMAN_MONTHS = [
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPassthroughCopy("src/.well-known");
   
   eleventyConfig.addFilter("head", (arr, n) => {
     if (!Array.isArray(arr)) return [];
