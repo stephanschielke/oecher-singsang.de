@@ -13,6 +13,31 @@ module.exports = function(eleventyConfig) {
     return arr.slice(0, n);
   });
 
+  // Seeded shuffle - same result for entire day
+  eleventyConfig.addFilter("seededShuffle", (arr, n) => {
+    if (!Array.isArray(arr) || arr.length === 0) return [];
+    const today = new Date();
+    const seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+    
+    // Simple seeded random (mulberry32)
+    const seededRandom = (s) => {
+      return () => {
+        s |= 0; s = s + 0x6D2B79F5 | 0;
+        let t = Math.imul(s ^ s >>> 15, 1 | s);
+        t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+        return ((t ^ t >>> 14) >>> 0) / 4294967296;
+      };
+    };
+    
+    const random = seededRandom(seed);
+    const shuffled = [...arr];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return n ? shuffled.slice(0, n) : shuffled;
+  });
+
   eleventyConfig.addFilter("slugify", (str) => {
     if (!str) return "";
     return str.toString().toLowerCase()
