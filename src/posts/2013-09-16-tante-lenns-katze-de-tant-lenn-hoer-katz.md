@@ -22,7 +22,7 @@ wp_id: 353
 <p>Das Gedicht wurde verfasst von <strong>Lambert Piedboeuf</strong> (1863).<br>
 Vorgetragen von <strong>Irmgard Farber</strong> im Stauferkeller am 02.09.2013.</p>
 <p><iframe width="625" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" title="SoundCloud Audio Player" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F110777067&amp;show_artwork=true&amp;maxwidth=625&amp;maxheight=938"></iframe></p>
-<table>
+<table class="translation-table">
 <thead>
 <tr>
 <th>De Tant Lenn hör Katz</th>
@@ -31,64 +31,110 @@ Vorgetragen von <strong>Irmgard Farber</strong> im Stauferkeller am 02.09.2013.<
 </thead>
 <tbody>
 <tr>
-<td>Ming au Tant Lenn, die hau en Katz,<br>
-Woran hör jot ooet Hatz jehange.<br>
-“Mär”, saat se döcks, „ich ärg mich schwatz,<br>
-Weil mich dat Dier jeng Müs welt fange!”</td>
-<td>Meine alte Tante Leni, die hatte eine Katze,<br>
-Woran ihr gutes altes Herz gehangen.<br>
-“Aber”, sagte sie oft “ich ärgere mich schwartz”,<br>
-Weil mich das Tier keine Maus fangen will!”</td>
+<td>Ming au Tant Lenn, die hau en Katz,</td>
+<td>Meine alte Tante Leni, die hatte eine Katze,</td>
 </tr>
 <tr>
-<td>“Ja”, sag ich, „dat es schlemm, leiv Tant!<br>
-Et es ne Feähler vör wie henge!<br>
-Mär Diere lieren alderhand, —<br>
-Ich jlöiv, dat wür hör beizebrenge!”</td>
-<td>“Ja” sagte ich, “das ist schlimm, liebe Tante!<br>
-Es ist ein Fehler so oder so!<br>
-Aber Tiere lernen allerhand, –<br>
-Ich glaube, dass ist ihr beizubringen!”</td>
+<td>Woran hör jot ooet Hatz jehange.</td>
+<td>Woran ihr gutes altes Herz gehangen.</td>
 </tr>
 <tr>
-<td>„Jong”, sätt de Tant, „breng et hör bei!”<br>
-Se kreäg de Dues, — se muuet ens schnuvve.<br>
-“Da kriß de ouch ming schönn jroe Sei!” —<br>
-De Tant hielt nevvebei ouch Duvve.</td>
-<td>“Junge”, sagt die Tante, “bring es ihr bei!”<br>
-Sie kriegt die Maus, – sie muss mal riechen.<br>
-“Da kriegst du auch meine schöne junge Taube!” –<br>
-Die Tante hielt nebenbei auch Tauben.</td>
+<td>“Mär”, saat se döcks, „ich ärg mich schwatz,</td>
+<td>“Aber”, sagte sie oft “ich ärgere mich schwartz”,</td>
 </tr>
 <tr>
-<td>Ich spruech mich met ming Frönnden av:<br>
-Vür hant dann onger oser Jonge<br>
-Än met en Koed de Katz schönn brav<br>
-An ming Tant Lenn hör Schell jebonge.</td>
-<td>Ich sprach mich mit meinen Freunden ab:<br>
-Wir haben dann unter unseren Jungen<br>
-mit einer Kordel die Katze schön brav<br>
-bei meiner Tante Leni an ihrer Glocke (Schelle) festgebunden.</td>
+<td>Weil mich dat Dier jeng Müs welt fange!”</td>
+<td>Weil mich das Tier keine Maus fangen will!”</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>“Ja”, sag ich, „dat es schlemm, leiv Tant!</td>
+<td>“Ja” sagte ich, “das ist schlimm, liebe Tante!</td>
 </tr>
 <tr>
-<td>Do wor jet loos! Än wie de Tant<br>
-Könt onverhoffs noh heäm jejange.<br>
-Sätt höre Nobber: “Da’s scharmant!<br>
-<em>Ühr Katz, die ka jo Müßjere fange!</em>” — —</td>
-<td>Da war was los! Und wie die Tante<br>
-kam unverhofft nach Hause.<br>
-Sagt ihr Nachbar: “Das ist charmant!”<br>
-Ihre Katze, die kann ja Mäuschen fangen!” —</td>
+<td>Et es ne Feähler vör wie henge!</td>
+<td>Es ist ein Fehler so oder so!</td>
 </tr>
 <tr>
-<td>Nun roen ich jedderenge hei,<br>
-Et met en Tant net ze verderve; —<br>
-Ich kreäg zwor met der Zitt de Sei;<br>
-Ich han se ävver mösse <em>erve</em>!</td>
-<td>Nun rate ich jedem hier,<br>
-Es sich mit der Tante nicht zu verderben; —<br>
-Ich krieg zwar mit der Zeit die Tauben;<br>
-Ich hätte sie aber ohnehin erben müssen.</td>
+<td>Mär Diere lieren alderhand, —</td>
+<td>Aber Tiere lernen allerhand, –</td>
+</tr>
+<tr>
+<td>Ich jlöiv, dat wür hör beizebrenge!”</td>
+<td>Ich glaube, dass ist ihr beizubringen!”</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>„Jong”, sätt de Tant, „breng et hör bei!”</td>
+<td>“Junge”, sagt die Tante, “bring es ihr bei!”</td>
+</tr>
+<tr>
+<td>Se kreäg de Dues, — se muuet ens schnuvve.</td>
+<td>Sie kriegt die Maus, – sie muss mal riechen.</td>
+</tr>
+<tr>
+<td>“Da kriß de ouch ming schönn jroe Sei!” —</td>
+<td>“Da kriegst du auch meine schöne junge Taube!” –</td>
+</tr>
+<tr>
+<td>De Tant hielt nevvebei ouch Duvve.</td>
+<td>Die Tante hielt nebenbei auch Tauben.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Ich spruech mich met ming Frönnden av:</td>
+<td>Ich sprach mich mit meinen Freunden ab:</td>
+</tr>
+<tr>
+<td>Vür hant dann onger oser Jonge</td>
+<td>Wir haben dann unter unseren Jungen</td>
+</tr>
+<tr>
+<td>Än met en Koed de Katz schönn brav</td>
+<td>mit einer Kordel die Katze schön brav</td>
+</tr>
+<tr>
+<td>An ming Tant Lenn hör Schell jebonge.</td>
+<td>bei meiner Tante Leni an ihrer Glocke (Schelle) festgebunden.</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Do wor jet loos! Än wie de Tant</td>
+<td>Da war was los! Und wie die Tante</td>
+</tr>
+<tr>
+<td>Könt onverhoffs noh heäm jejange.</td>
+<td>kam unverhofft nach Hause.</td>
+</tr>
+<tr>
+<td>Sätt höre Nobber: “Da’s scharmant!</td>
+<td>Sagt ihr Nachbar: “Das ist charmant!”</td>
+</tr>
+<tr>
+<td><em>Ühr Katz, die ka jo Müßjere fange!</em>” — —</td>
+<td>Ihre Katze, die kann ja Mäuschen fangen!” —</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td>Nun roen ich jedderenge hei,</td>
+<td>Nun rate ich jedem hier,</td>
+</tr>
+<tr>
+<td>Et met en Tant net ze verderve; —</td>
+<td>Es sich mit der Tante nicht zu verderben; —</td>
+</tr>
+<tr>
+<td>Ich kreäg zwor met der Zitt de Sei;</td>
+<td>Ich krieg zwar mit der Zeit die Tauben;</td>
+</tr>
+<tr>
+<td>Ich han se ävver mösse <em>erve</em>!</td>
+<td>Ich hätte sie aber ohnehin erben müssen.</td>
 </tr>
 </tbody>
 </table>

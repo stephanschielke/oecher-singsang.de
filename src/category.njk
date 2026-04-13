@@ -7,7 +7,7 @@ permalink: /category/{{ category.name | slugify }}/
 layout: layouts/base.njk
 ---
 <header class="archive-header">
-  <h1 class="archive-title">Beiträge in {{ category.name }}</h1>
+  <h1 class="archive-title">Beiträge mit {{ category.name }}</h1>
 </header>
 
 {% for post in category.posts %}
@@ -25,5 +25,5 @@ layout: layouts/base.njk
 {% endfor %}
 
 <nav class="archive-nav">
-  <a href="/archive/">← Beiträge</a>
+  <a href="/archive/">← Alle Beiträge</a>
 </nav>

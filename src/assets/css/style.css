@@ -244,6 +244,89 @@ img {
 	color: var(--color-accent);
 }
 
+/* Translation tables - dialect/translation side-by-side */
+.entry-content table.translation-table {
+	border-collapse: separate;
+	border-spacing: 0;
+	margin: var(--space-lg) 0;
+}
+
+.entry-content table.translation-table tbody tr {
+	background: transparent;
+}
+
+.entry-content table.translation-table td {
+	padding: 0.35em var(--space-md);
+	vertical-align: top;
+	font-size: 1.1em;
+	line-height: var(--leading-tight);
+	border: none;
+}
+
+.entry-content table.translation-table td:first-child {
+	width: 50%;
+	font-style: italic;
+	color: var(--color-text-secondary);
+	text-align: right;
+	padding-right: var(--space-md);
+}
+
+.entry-content table.translation-table td:last-child {
+	padding-left: var(--space-md);
+}
+
+.entry-content table.translation-table tbody tr:first-child td {
+	padding-top: 0.8em;
+}
+
+.entry-content table.translation-table tbody tr:last-child td {
+	padding-bottom: 0.8em;
+}
+
+.entry-content table.translation-table tbody + tbody tr:first-child td {
+	border-top: 1px solid var(--color-border);
+}
+
+.entry-content table.translation-table tr:hover td {
+	background: rgba(253, 202, 12, 0.08);
+	transition: background 0.15s ease;
+}
+
+.translation-table th {
+	padding: var(--space-sm) var(--space-md);
+	border-bottom: 2px solid var(--color-accent);
+}
+
+.translation-table td {
+	padding: 0.1em var(--space-md);
+	vertical-align: top;
+	line-height: var(--leading-tight);
+}
+
+.translation-table td:first-child {
+	width: 50%;
+	font-style: italic;
+	color: var(--color-text-secondary);
+	text-align: right;
+}
+
+.translation-table tbody tr:first-child td {
+	padding-top: 0.8em;
+}
+
+.translation-table tbody tr:last-child td {
+	padding-bottom: 0.8em;
+}
+
+.translation-table tbody + tbody tr:first-child td {
+	border-top: 1px solid var(--color-border);
+}
+
+.translation-table tr:hover td {
+	background: rgba(253, 202, 12, 0.08);
+	transition: background 0.15s ease;
+}
+
 /* Form fields */
 button,
 input,
